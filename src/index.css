@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------- General -------------------------------- */
+
+:root {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* ----------------------- Typography --------------------  */
+.text-main {
+  font-family: "Nunito Sans";
+  color: white;
+  font-weight: 600;
+}
+
+.text-light {
+  font-family: "Nunito Sans";
+  color: white;
+  font-weight: 200;
+}
+/* ----------------------- Layout --------------------  */
+
+.margin {
+  padding: 25px 25px 25px 25px;
+  border-radius: 20px;
+}
+
+/* ----------------------- Animation -------------------- */
+
+@layer utilities {
+  .hithere {
+    animation: hithere 2.5s ease infinite;
+  }
+  @keyframes hithere {
+    30% {
+      transform: scale(1.2);
+    }
+    40%,
+    60% {
+      transform: rotate(-20deg) scale(1.2);
+    }
+    50% {
+      transform: rotate(20deg) scale(1.2);
+    }
+    70% {
+      transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
